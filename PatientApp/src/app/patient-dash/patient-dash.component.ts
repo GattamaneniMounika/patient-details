@@ -16,12 +16,13 @@ export class PatientDashComponent implements OnInit {
 
     ngOnInit(): void {
         this.formValue = this.formBuilder.group({
+            patientId: [''],
             name: [''],
-
-            mail: [''],
-            adress: [''],
-            problem: [''],
-            doctor: ['']
+            email: [''],
+            disease: [''],
+            age: [''],
+            gender: [''],
+            phnno: ['']
 
         })
     }

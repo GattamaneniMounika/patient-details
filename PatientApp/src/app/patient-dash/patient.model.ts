@@ -1,5 +1,5 @@
 export class PatientData {
-    id: number = 0;
+    patientid: number = 0;
     name: string = '';
     mail: string = '';
     address: string = '';
@@ -7,3 +7,4 @@ export class PatientData {
     Doctorname: string = ''
 
 }
+
