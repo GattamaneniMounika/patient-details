@@ -1,0 +1,93 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Patient App</h2>
+        <div class="d-flex">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+                Patient
+            </button>
+        </div>
+    </div>
+</nav>
+<!--Jumbotron-->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Patient App Management</h1>
+        <p class="col-md-8 fs-4">you can save records of Patient using angular</p>
+        <button class="btn btn-primary btn-lg" type="button">Patient</button>
+    </div>
+</div>
+<!--close jumbotron-->
+<!--Table Shown Here-->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">mail</th>
+            <th scope="col">Adress</th>
+            <th scope="col"> problem</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td>1</td>
+        <td>lakshmi</td>
+        <td>Lakshmi@gmail.com</td>
+        <td>nellore</td>
+        <td>Fever</td>
+        <td>ravi</td>
+        <td>
+            <button class="btn btn-info">Edit</button>&nbsp;
+            <button class="btn btn-danger">Delete</button>
+        </td>
+    </tbody>
+</table>
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div class="mb-3">
+                        <label class="form-label"> Name </label>
+                        <input type="text" formControlName="Firstname" class="form-control"
+                            placeholder="Patient First Name" id="exampleInputEmail1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Mail</label>
+                        <input type="text" formControlName="mail" class="form-control" placeholder="patient mail"
+                            id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <input type="text" formControlName="Address" class="form-control" placeholder="patient Adress"
+                            id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">problem</label>
+                        <input type="text" formControlName="Patient problem" class="form-control"
+                            placeholder="patient problem" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Doctor</label>
+                        <input type="text" formControlName=" Doctor ng name" class="form-control"
+                            placeholder="Doctor Name" id="exampleInputPassword1">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (Click)="addPatient()">add patient</button>
+        </div>
+    </div>
+</div>
